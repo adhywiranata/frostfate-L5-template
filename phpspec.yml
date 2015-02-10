@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: L5template
+        psr4_prefix: L5template
+        src_path: app
