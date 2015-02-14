@@ -4,17 +4,17 @@ This is the template of the all-new Laravel 5 for personal use. Enjoy!
 
 This L5 is using PSR-4 php method so maybe u want to read a bit 'bout it. 
 
-###Migrate
+####Migration
 
 DATABASE Migration :
-```$ php artisan migrate 
+```$ php artisan migrate``` 
 
 rollback a migration:
 ```$ php artisan migrate:rollback
 
 IF you have migrated the database before, please run
-```$ composer dumpautoload
-```$ php artisan migrate:rollback
+```$ composer dumpautoload```
+```$ php artisan migrate:rollback```
 
 DATABASE Seeding:
 
