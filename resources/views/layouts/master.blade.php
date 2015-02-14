@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon" />
-	<title>Laravel</title>
+	<title> {{ Config::get('app.app_name') }} </title>
 
 	<link href="css/app.css" rel="stylesheet"/>
 	<link href="css/bootstrap.min.css" rel="stylesheet"/>

@@ -30,7 +30,9 @@ class PostController extends Controller {
 	 */
 	public function index()
 	{
-		return view('post');
+		$posts = Post::all();
+		return View::make('post')
+			->withPosts($posts);
 	}
 
 }
