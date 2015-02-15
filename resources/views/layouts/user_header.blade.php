@@ -7,12 +7,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">Frostfate L5 Template</a>
+      <a href="{{ url() }}" class="navbar-brand">Frostfate L5 Template</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li>
-          <a href="#">Home</a>
+          <a href="{{ url() }}/post">Home</a>
         </li>
         <li>
           <a href="#">Post</a>

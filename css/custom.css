@@ -30,7 +30,7 @@ body {
 	color: #000;
 	font-weight: 100;
 }
-h3{ color: #000; font-family: 'Lato'; font-weight: 300; }
+h1, h2, h3{ color: #666; font-family: 'Lato'; font-weight: 300; }
 
 .navbar-form input, .form-inline input {
   width:auto;
@@ -130,6 +130,8 @@ a,a:hover {
   padding:6px;
   color:#fff;
 }
+
+
     
 .btn-twitter {background-color:#4099FF;color:#fff;}
 .btn-facebook {background-color:#3B5998;color:#fff;}

@@ -44,6 +44,13 @@ $ php artisan migrate:rollback
 
 DATABASE Seeding:
 
+
+####Things to Note
+
+1. if you haven't understand Namespaces, better learn the basics, since L5 heavily utilizes Namespaces.
+
+2. Play with PHP artisan and composer. It helps A LOT.
+
 ========================================================================
 Themes are using Bootstrap and Bootstrap Zero.
 Coded with Love and Care, notice me or send issues on bugs.
