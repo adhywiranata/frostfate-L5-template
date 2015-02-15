@@ -1,5 +1,8 @@
 <?php namespace L5template\Http\Controllers;
 
+use Illuminate\Routing\Controller;
+use L5template\Models\Post;
+
 class PostController extends Controller {
 
 	/*
@@ -31,7 +34,7 @@ class PostController extends Controller {
 	public function index()
 	{
 		$posts = Post::all();
-		return View::make('post')
+		return view('post')
 			->withPosts($posts);
 	}
 
