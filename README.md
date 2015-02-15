@@ -11,13 +11,16 @@ This template is using the Apache2 server. For other server , please use your ow
 
 configure database connection, user, and password on the ".env" file 
 
-``` DB_HOST=localhost
+``` 
+DB_HOST=localhost
 
 DB_DATABASE='frostfate-L5-db'
 
 DB_USERNAME='YOUR-APACHE-USERNAME'
 
-DB_PASSWORD='YOUR-APACHE-PASSWORD' ```
+DB_PASSWORD='YOUR-APACHE-PASSWORD' 
+
+```
 
 
 ####Migration
@@ -32,9 +35,12 @@ rollback a migration:
 
 IF you have migrated the database before, please run
 
-``` $ composer dumpautoload
+```
+ $ composer dumpautoload
 
-$ php artisan migrate:rollback ```
+$ php artisan migrate:rollback 
+
+```
 
 DATABASE Seeding:
 
