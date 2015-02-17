@@ -36,7 +36,7 @@ rollback a migration:
 IF you have migrated the database before, please run
 
 ```
- $ composer dumpautoload
+$ composer dumpautoload
 
 $ php artisan migrate:rollback 
 
@@ -44,12 +44,44 @@ $ php artisan migrate:rollback
 
 DATABASE Seeding:
 
+####Namespaces
+
+For this project I'm using custom namespace, the "l5template"
+
+so when we need to declare namespaces, just put it just like this
+
+```
+namespace L5template\Http\Controllers;
+```
+
+the above example is for the Controllers namespaces.
+
+
+####Controllers
+
+Controller Validation
+
+check on: apps > Http > Requests > .php files for Requests
+
+Registering a Request
+
+use namespaces on the Controllers
+
+```
+use L5template\http\Requests
+
+use L5template\Http\Requests\CreatePostRequest; 
+```
 
 ####Things to Note
 
 1. if you haven't understand Namespaces, better learn the basics, since L5 heavily utilizes Namespaces.
 
 2. Play with PHP artisan and composer. It helps A LOT.
+
+3. This Laravel 5 template is using Eloquent. The recommended way to do things with databases
+
+4. This Laravel 5 template is using RESTful method. Checkout the Routes.php file for it
 
 ========================================================================
 Themes are using Bootstrap and Bootstrap Zero.

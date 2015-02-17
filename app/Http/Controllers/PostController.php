@@ -3,7 +3,11 @@
 use Illuminate\Routing\Controller;
 
 use L5template\Models\Post;
-use L5template\Models\People;
+use L5template\Http\Requests;
+use L5template\Http\Requests\CreatePostRequest;
+
+use Request;
+
 
 class PostController extends Controller {
 
@@ -36,7 +40,7 @@ class PostController extends Controller {
 	public function index()
 	{
 		$posts = Post::all();
-		return view('post.post_index')
+		return view('posts.post_index')
 			->withPosts($posts);
 	}
 	public function post_details($slug)
@@ -46,8 +50,29 @@ class PostController extends Controller {
 		// throws 404 error page if no posts with current slug
 		if(sizeof($posts)==0) abort(404);
 
-		return view('post.post_details')
+		return view('posts.post_details')
 			->withPosts($posts);
 	}
+	public function create()
+	{
+		return view('posts.post_create');
+	}
+
+	public function store(CreatePostRequest $request){
+		
+		$input = $request->all();
+
+		$slug = strtolower($input['title']);
+		$slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $slug);
+		$input['slug'] = $slug;
+		$input['user_id'] = 1;
+
+		Post::create($input);
+		//$post->user_id 	= Auth::user()->user_id;
+		
+
+		return redirect('post');
+	}
+
 
 }

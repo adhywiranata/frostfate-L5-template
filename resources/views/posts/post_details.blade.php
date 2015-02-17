@@ -3,7 +3,7 @@
 @section('content')
 	<body>
 		
-		<div class="container cover" style="background:url('images/macbook.jpg'); margin:50px 0; width:100%; height:150px; background-size:cover; background-position:0% 45%; ">
+		<div class="container cover" style="background:url('images/macbook.jpg'); margin:30px 0; width:100%; height:150px; background-size:cover; background-position:0% 45%; ">
 		</div>
 
 		<div class="container">
