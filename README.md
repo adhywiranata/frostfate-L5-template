@@ -4,7 +4,7 @@ This is the template of the all-new Laravel 5 for personal use. Enjoy!
 
 This L5 is using PSR-4 php method so maybe u want to read a bit 'bout it. 
 
-This template is using the Apache2 server. For other server , please use your own server configuration. Tt's not much different. You can still follow the below configurations.
+This template is using the Apache2 server. For other server , please use your own server configuration. It's not much different. You can still follow the below configurations.
 
 
 ####Database
@@ -43,6 +43,8 @@ $ php artisan migrate:rollback
 ```
 
 DATABASE Seeding:
+
+WIP... ^^
 
 ####Namespaces
 
