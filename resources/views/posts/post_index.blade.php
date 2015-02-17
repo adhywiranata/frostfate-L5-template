@@ -45,8 +45,18 @@
 		              	</div>
 		                <div class="col-xs-12 col-md-12 col-lg-9">
 		                  <p>{{ $post->content }}</p>
-		                  <p class="pull-right"><span class="label label-default">keyword</span> <span class="label label-default">tag</span> <span class="label label-default">post</span></p>
-		                  <ul class="list-inline"><li><a href="#">{{ $post->created_at->diffForHumans() }}</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li></ul>
+		                  <p class="pull-right">
+		                  	<span class="label label-default">keyword</span> 
+		                  	<span class="label label-default">tag</span> 
+		                  	<span class="label label-default">post</span>
+		                  </p>
+		                  <ul class="list-inline">
+		                  	<li><a href="#">{{ $post->created_at->diffForHumans() }}</a></li>
+		                  	<li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li>
+		                  	<li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li>
+		                  	<li><a href="{{ url() }}/post/{{$post->slug}}/edit"><i class="glyphicon glyphicon-edit"></i> Edit Post</li>
+		                  	<li style="vertical-align:bottom">{!! Form::open(array("url" => "post/".$post->slug, "method" => "delete")) !!}<a href=""><button type="submit" class="button_as_link"><i class="glyphicon glyphicon-trash"></i> Delete Post</button></a>{!! Form::close() !!}</li>
+		                  </ul>
 		                  </div>
 		                <div class="col-xs-3"></div>
 		              </div>
@@ -63,4 +73,5 @@
 		   	</div><!--/col-12-->
 		  </div>
 	</div>
+
 @stop

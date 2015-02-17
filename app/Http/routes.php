@@ -19,8 +19,9 @@ Route::get('post', 'PostController@index');
 Route::get('{slug}','PostController@post_details');
 Route::get('post/create', 'PostController@create');
 Route::post('post', 'PostController@store');
-Route::get('post/{id}/edit', 'PostController@edit');
-Route::put('{id}', 'PostController@update');
+Route::get('post/{slug}/edit', 'PostController@edit');
+Route::put('post/{slug}', 'PostController@update');
+Route::delete('post/{slug}', 'PostController@destroy');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

@@ -69,10 +69,43 @@ class PostController extends Controller {
 
 		Post::create($input);
 		//$post->user_id 	= Auth::user()->user_id;
+		return redirect('post');
+	}
+
+	public function edit($slug){
+		$post = Post::where('slug',$slug)
+			->first();
 		
+		return view('posts.post_edit')
+			->withPost($post);
+	}
+
+	public function update(CreatePostRequest $request, $slug){
+		
+		$input = $request->all();
+
+		$post = Post::where('slug',$slug)
+			->first();
+
+		//Post::update($input);
+
+		$post->title 	= $input['title'];
+		$post->content 	= $input['content'];
+		$post->update();
 
 		return redirect('post');
 	}
+
+	public function destroy($slug)
+	{
+		$post = Post::where('slug',$slug)
+			->first();
+
+		$post->delete();
+
+		return redirect('post');
+	}
+
 
 
 }

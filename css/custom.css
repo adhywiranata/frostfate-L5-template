@@ -131,7 +131,14 @@ a,a:hover {
   color:#fff;
 }
 
-
+.button_as_link{
+     background: none;
+     border: none;
+     color: #223344;
+     cursor: pointer;
+     float:left;
+     vertical-align: bottom;
+}
     
 .btn-twitter {background-color:#4099FF;color:#fff;}
 .btn-facebook {background-color:#3B5998;color:#fff;}
