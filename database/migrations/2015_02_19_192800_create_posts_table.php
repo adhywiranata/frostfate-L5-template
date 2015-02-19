@@ -15,12 +15,17 @@ class CreatePostsTable extends Migration {
 		Schema::create('posts', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('user_id');
+			$table->integer('user_id')->unsigned();
 			$table->string('title');
 			$table->text('content')->nullable();
 			$table->string('slug')->unique();
 			$table->timestamps();
+
+			$table->foreign('user_id')->references('id')->on('users');
 		});
+
+		$statement = "ALTER TABLE posts AUTO_INCREMENT = 1001";
+        DB::unprepared($statement);
 	}
 
 	/**
@@ -30,6 +35,9 @@ class CreatePostsTable extends Migration {
 	 */
 	public function down()
 	{
+		//Schema::table('posts', function (Blueprint $table) {
+          //  $table->dropForeign('posts_user_id_foreign');
+        //});
 		Schema::drop('posts');
 	}
 

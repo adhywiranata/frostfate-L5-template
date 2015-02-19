@@ -10,18 +10,6 @@ use Request;
 
 
 class PostController extends Controller {
-
-	/*
-	|--------------------------------------------------------------------------
-	| Welcome Controller
-	|--------------------------------------------------------------------------
-	|
-	| This controller renders the "marketing page" for the application and
-	| is configured to only allow guests. Like most of the other sample
-	| controllers, you are free to modify or remove it as you desire.
-	|
-	*/
-
 	/**
 	 * Create a new controller instance.
 	 *
@@ -41,16 +29,6 @@ class PostController extends Controller {
 	{
 		$posts = Post::all();
 		return view('posts.post_index')
-			->withPosts($posts);
-	}
-	public function post_details($slug)
-	{
-		$posts = Post::where('slug',$slug)->get();
-		
-		// throws 404 error page if no posts with current slug
-		if(sizeof($posts)==0) abort(404);
-
-		return view('posts.post_details')
 			->withPosts($posts);
 	}
 	public function create()
