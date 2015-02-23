@@ -22,7 +22,7 @@ class User extends Eloquent implements AuthenticatableContract, CanResetPassword
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $fillable = ['name', 'email', 'password', 'role_id'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -30,5 +30,15 @@ class User extends Eloquent implements AuthenticatableContract, CanResetPassword
 	 * @var array
 	 */
 	protected $hidden = ['password', 'remember_token'];
+
+	public function posts()
+	{
+		return $this->hasMany('L5template\Models\Post');
+	}
+
+	public function isAnAdmin()
+	{
+		return true;
+	}
 
 }

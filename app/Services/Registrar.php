@@ -1,6 +1,6 @@
 <?php namespace L5template\Services;
 
-use L5template\User;
+use L5template\Models\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
@@ -32,7 +32,8 @@ class Registrar implements RegistrarContract {
 		return User::create([
 			'name' => $data['name'],
 			'email' => $data['email'],
-			'password' => bcrypt($data['password']),
+			'role_id' => 14, //role as a member
+			'password' => bcrypt($data['password'])
 		]);
 	}
 

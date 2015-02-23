@@ -3,6 +3,7 @@
 use Illuminate\Routing\Controller;
 
 use L5template\Models\Post;
+use L5template\Models\User;
 
 class GeneralController extends Controller {
 	/**
@@ -32,14 +33,30 @@ class GeneralController extends Controller {
 		//first search through users (relatively less results)
 
 		//if not found, search through posts 
-		$posts = Post::where('slug',$keyword)->get();
+		$post = Post::where('slug',$keyword)
+			->first();
 			
 		// throws 404 error page if no posts with current slug
-		if(sizeof($posts)==0) abort(404);
-
+		if(sizeof($post)!=0) 
+		{
 		return view('posts.post_details')
-			->withPosts($posts);
-	}
+			->withPost($post);
+		}
+		else{
+			$user = User::where('name',$keyword)
+				->first();
+			if(sizeof($user)!=0)
+			{
+				return view('users.user_details')
+					->withUser($user);
+			}
+			else
+			{
+				abort(404);
+			}
+				
+		}
+	}	
 }
 
 ?>

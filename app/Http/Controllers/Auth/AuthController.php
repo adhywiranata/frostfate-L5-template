@@ -20,6 +20,8 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+	protected $redirectTo = '/dashboard'; // Laravel 5 predefined redirect route. set this to override 
+
 	/**
 	 * Create a new authentication controller instance.
 	 *

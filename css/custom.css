@@ -8,6 +8,14 @@ body {
 	font-weight: 400;
 }
 
+ul,li{list-style: none; }
+li{margin:0;}
+ul{padding:0;}
+
+.message-list > li:nth-child(odd){
+  background:#efefef;
+}
+
 .container {
 	vertical-align: middle;
 	}
@@ -30,7 +38,7 @@ body {
 	color: #000;
 	font-weight: 100;
 }
-h1, h2, h3{ color: #666; font-family: 'Lato'; font-weight: 300; }
+h1, h2, h3, h4, h5{ color: #666; font-family: 'Lato'; font-weight: 300; }
 
 .navbar-form input, .form-inline input {
   width:auto;

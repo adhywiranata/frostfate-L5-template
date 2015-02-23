@@ -33,7 +33,7 @@
 		            	<div class="row">
 		            		<br>
 		            		<div class="col-md-12">
-		            			Jeff Moriarty
+		            			<a href="{{ $post->name }}">{{ $post->name }}</a></h3>
 		            		</div>
 		            	</div>
 		            </div>
@@ -51,7 +51,7 @@
 		                  	<span class="label label-default">post</span>
 		                  </p>
 		                  <ul class="list-inline">
-		                  	<li><a href="#">{{ $post->created_at->diffForHumans() }}</a></li>
+		                  	<li><a href="#">{{ $post->created_at }}</a></li>
 		                  	<li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li>
 		                  	<li><a href="#"><i class="glyphicon glyphicon-share"></i> 34 Shares</a></li>
 		                  	<li><a href="{{ url() }}/post/{{$post->slug}}/edit"><i class="glyphicon glyphicon-edit"></i> Edit Post</li>

@@ -15,7 +15,8 @@ class Post extends Eloquent {
 	protected $fillable = [
 		'title',
 		'content',
-		'slug'
+		'slug',
+		'user_id'
 	];
 
 }

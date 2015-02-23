@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.master')
 
 @section('content')
 <div class="container-fluid">
@@ -18,7 +18,7 @@
 						</div>
 					@endif
 
-					<form class="form-horizontal" role="form" method="POST" action="/auth/register">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('auth/register')}}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">

@@ -2,12 +2,7 @@
 
 @section('content')
 	<body>
-		
-		<div class="container cover" style="background:url('images/macbook.jpg'); margin:30px 0; width:100%; height:150px; background-size:cover; background-position:0% 45%; ">
-		</div>
-
-		<div class="container">
-			@foreach($posts as $post)
+		<div class="container" style="margin-top:50px;">
 			<div class="row">
 				<h2 align="center"><span style="border-bottom:1px solid #666;">{{ $post->title }}</span></h2>
 			</div>
@@ -44,7 +39,6 @@
 		            </div>
 		          </div>
 		          <hr>
-		          @endforeach
 		        </div>
 		      </div>
 		                                                                                       

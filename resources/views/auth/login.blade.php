@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top:50px">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
@@ -18,7 +18,7 @@
 						</div>
 					@endif
 
-					<form class="form-horizontal" role="form" method="POST" action="/auth/login">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('auth/login') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
@@ -51,7 +51,7 @@
 									Login
 								</button>
 
-								<a href="/password/email">Forgot Your Password?</a>
+								<a href="{{ url('password/email') }}">Forgot Your Password?</a>
 							</div>
 						</div>
 					</form>

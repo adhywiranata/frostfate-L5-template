@@ -17,12 +17,21 @@ Route::get('/', 'PostController@index');
 Route::get('home', 'HomeController@index');
 
 Route::get('post', 'PostController@index');
-Route::get('{keyword}','GeneralController@get_detail');
 Route::get('post/create', 'PostController@create');
 Route::post('post', 'PostController@store');
 Route::get('post/{slug}/edit', 'PostController@edit');
 Route::put('post/{slug}', 'PostController@update');
 Route::delete('post/{slug}', 'PostController@destroy');
+
+Route::get('dashboard','UserController@index');
+
+Route::get('admin_panel',['middleware' => 'admin', function(){
+	return 'admin only area';
+}]);
+
+Route::get('{keyword}','GeneralController@get_detail');
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
