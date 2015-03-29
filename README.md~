@@ -98,15 +98,6 @@ namespace L5template\Http\Controllers;
 the above example is for the Controllers namespaces.
 
 
-####Restful Requests
-
-index => display data
-create => display input form
-store => store data 
-edit => display edit form
-update => update data
-delete => delete data
-
 ##Things to Note
 
 1. Read the basic Composer and Laravel 5 Installation 
