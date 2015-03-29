@@ -29,7 +29,8 @@
 				  	<div class="row">    
 		            <br>
 		            <div class="col-md-2 col-sm-3 text-center">
-		            	<a class="story-img" href="#"><img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:100px;height:100px" class="img-circle"></a>
+		            	<a class="story-img" href="#">
+		            	<img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:100px;height:100px" class="img-circle"></a>
 		            	<div class="row">
 		            		<br>
 		            		<div class="col-md-12">
@@ -61,9 +62,46 @@
 		                <div class="col-xs-3"></div>
 		              </div>
 		              <br><br>
+		              <div class="comment col-md-8">
+			          	<div class="col-md-12 row" style="height:auto; padding:10px">
+			          		<div class="col-md-2">
+			          			<img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:50px;height:50px" class="img-circle pull-right"></a>
+			          		</div>
+			          		<div class="col-md-10" style="background:#eee; padding:5px;">
+			          			<b>John Loe</b><br/>
+			          			<span>
+			          				test test test<br/>
+			          				asdasd
+			          				asdasd<br/>
+			          				asdasd<br/>
+			          				asdasd<br/>
+			          				asdasd<br/>
+			          			</span>
+			          		</div>
+			          	</div>
+			          	<div class="col-md-12 row" style="height:70px; padding:10px">
+			          		<div class="col-md-2">
+			          			<img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:50px;height:50px" class="img-circle pull-right"></a>
+			          		</div>
+			          		<div class="col-md-10" style="background:#eee; padding:5px;">
+			          			<b>John Loe</b><br/>
+			          			<span>test test test</span>
+			          		</div>
+			          	</div>
+			          	<div class="col-md-12 row" style="height:70px; padding:10px">
+			          		<div class="col-md-2">
+			          			<img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:50px;height:50px" class="img-circle pull-right"></a>
+			          		</div>
+			          		<div class="col-md-10" style="background:#eee; padding:5px;">
+			          			<b>John Loe</b><br/>
+			          			<span>test test test</span>
+			          		</div>
+			          	</div>	
+			          </div>
 		            </div>
 		          </div>
 		          <hr>
+
 		          @endforeach
 		        </div>
 		      </div>

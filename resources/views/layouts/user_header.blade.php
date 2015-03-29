@@ -20,9 +20,33 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
           <ul class="dropdown-menu" style="padding:12px;">
             <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button>
+              <input type="text" class="form-control pull-left" placeholder="Search">
+              <br/>
+              <ul class="search-suggestion" style="margin:5px;">
+              <br/>
+              <li><b>results</b></li>
+              <li style="padding:10px 0px; border-bottom:1px solid #eee;">
+                <img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:30px;height:30px; margin:0 5px;" class="img-rounded"></a>
+                <a href="#"><b>Jo</b>hn Diggle</a>
+              </li>
+              <li style="padding:10px 0px;border-bottom:1px solid #eee;">
+                <img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:30px;height:30px; margin:0 5px;" class="img-rounded"></a>
+                <a href="#"><b>Jo</b>han Sebastian Bach</a>
+              </li>
+              <li style="padding:10px 0px;border-bottom:1px solid #eee;">
+                <img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:30px;height:30px; margin:0 5px;" class="img-rounded"></a>
+                <a href="#">Looking<b>jo</b>bs.com</a>
+              </li>
+              <li style="padding:10px 0px;border-bottom:1px solid #eee;">
+                <img src="https://splashbase.s3.amazonaws.com/snapwiresnaps/regular/tumblr_nhggel1Hvs1teue7jo1_1280.jpg" style="width:30px;height:30px; margin:0 5px;" class="img-rounded"></a>
+                <a href="#">John Diggle</a>
+              </li>
+          </ul>
             </form>
           </ul>
+
+          
         </li>
         @if (Auth::check())
         <li class="dropdown">
